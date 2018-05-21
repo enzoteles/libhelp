@@ -1,7 +1,10 @@
-package br.com.enzoteles.quickhelp
+package br.com.enzoteles.quickhelp.log
 
 import android.util.Log
 
+/**
+ * Created by enzoteles on 14/03/18.
+ */
 object HelpLog{
 
     const val TAG: String = "HELP"

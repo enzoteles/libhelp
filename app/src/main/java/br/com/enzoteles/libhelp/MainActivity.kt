@@ -3,7 +3,6 @@ package br.com.enzoteles.libhelp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import br.com.enzoteles.quickhelp.HelpConstant
-import br.com.enzoteles.quickhelp.HelpLog
 import br.com.enzoteles.quickhelp.fragment.HelpManagerFragment
 
 class MainActivity : AppCompatActivity() {

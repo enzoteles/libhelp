@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import br.com.enzoteles.quickhelp.HelpConstant
 import br.com.enzoteles.quickhelp.fragment.HelpFragment
-import br.com.enzoteles.quickhelp.HelpLog
+import br.com.enzoteles.quickhelp.log.HelpLog
 import kotlinx.android.synthetic.main.home.*
 
 class HomeFragment : HelpFragment(){
@@ -24,6 +24,17 @@ class HomeFragment : HelpFragment(){
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         detail = DetailFragment()
+
+        var string = HelpConstant.encrypt("t3l3s110033")
+        HelpConstant.passWord = string
+        HelpLog.info("cripy "+ HelpConstant.passWord!!)
+
+        var rev = HelpConstant.decrypt(HelpConstant.passWord!!)
+        HelpLog.info("revert == ${rev}")
+
+
+
+
         bt_ok.setOnClickListener {
             if (et_login.text.toString().equals("adm") && et_password.text.toString().equals("1234")){
                 HelpConstant.manager!!.replaceFragment(R.id.content, detail, "detail", true)

@@ -12,7 +12,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import java.io.*
-
+/**
+ * Created by enzoteles on 14/03/18.
+ */
 open class HelpCamera: Fragment(){
 
     private val REQUEST_CAMERA = 0

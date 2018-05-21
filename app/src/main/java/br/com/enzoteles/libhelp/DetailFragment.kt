@@ -8,7 +8,7 @@ import android.support.annotation.RequiresApi
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.enzoteles.quickhelp.HelpLog
+import br.com.enzoteles.quickhelp.log.HelpLog
 import br.com.enzoteles.quickhelp.camera.HelpCamera
 import kotlinx.android.synthetic.main.detail.*
 
