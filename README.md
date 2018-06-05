@@ -10,10 +10,11 @@
   - HelpFragment.kt: clase que extend o fragmento e herda os métodos do mesmo.
 ### 3. Log
   - HelpLog.kt: classe que facilida no gerenciamento dos log da aplicação 
-### 4. Constant
-  - HelpConstant: classe que possui alguns atributos estático e métodos estáticos para ajuda no desenvolvimento do app.
-
+### 4. Security
+  - HelpSecurity: classe que possui alguns atributos estático e métodos estáticos para ajuda no desenvolvimento do app.
 obs: Essas classes serão utilizadas no projetos que criaremos como exemplo.
+### 5. Mask
+  - HelpMask - classe que possui alguns métodos estáticos para máscara de cpf, telefone, celular e data de nascimento
 
 
   
