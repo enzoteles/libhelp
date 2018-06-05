@@ -31,6 +31,7 @@ class ValidateFragment: HelpFragment(){
         inputDate()
         inputCellPhone()
         inputPhone()
+        
 
     }
 
