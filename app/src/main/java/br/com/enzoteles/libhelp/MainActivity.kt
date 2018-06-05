@@ -2,7 +2,7 @@ package br.com.enzoteles.libhelp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import br.com.enzoteles.quickhelp.HelpConstant
+import br.com.enzoteles.quickhelp.security.HelpSecurity
 import br.com.enzoteles.quickhelp.fragment.HelpManagerFragment
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         manager = HelpManagerFragment(this)
-        HelpConstant.manager = manager
+        HelpSecurity.manager = manager
 
         home = HomeFragment()
         manager!!.addFragment(R.id.content, home, "home", false)

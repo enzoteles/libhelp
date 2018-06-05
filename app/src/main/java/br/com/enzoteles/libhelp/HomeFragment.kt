@@ -6,7 +6,7 @@ import android.support.annotation.RequiresApi
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.enzoteles.quickhelp.HelpConstant
+import br.com.enzoteles.quickhelp.security.HelpSecurity
 import br.com.enzoteles.quickhelp.fragment.HelpFragment
 import br.com.enzoteles.quickhelp.log.HelpLog
 import kotlinx.android.synthetic.main.home.*
@@ -25,11 +25,11 @@ class HomeFragment : HelpFragment(){
         super.onActivityCreated(savedInstanceState)
         detail = DetailFragment()
 
-        var string = HelpConstant.encrypt("t3l3s110033")
-        HelpConstant.passWord = string
-        HelpLog.info("cripy "+ HelpConstant.passWord!!)
+        var string = HelpSecurity.encrypt("t3l3s110033")
+        //HelpSecurity.passWord = string
+        HelpLog.info("cripy "+ string)
 
-        var rev = HelpConstant.decrypt(HelpConstant.passWord!!)
+        var rev = HelpSecurity.decrypt(string)
         HelpLog.info("revert == ${rev}")
 
 
@@ -37,7 +37,7 @@ class HomeFragment : HelpFragment(){
 
         bt_ok.setOnClickListener {
             if (et_login.text.toString().equals("adm") && et_password.text.toString().equals("1234")){
-                HelpConstant.manager!!.replaceFragment(R.id.content, detail, "detail", true)
+                HelpSecurity.manager!!.replaceFragment(R.id.content, detail, "detail", true)
             }
         }
 

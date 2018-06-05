@@ -8,6 +8,7 @@ import android.support.annotation.RequiresApi
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import br.com.enzoteles.quickhelp.security.HelpSecurity
 import br.com.enzoteles.quickhelp.log.HelpLog
 import br.com.enzoteles.quickhelp.camera.HelpCamera
 import kotlinx.android.synthetic.main.detail.*
@@ -16,6 +17,7 @@ class DetailFragment : HelpCamera(){
 
     private val REQUEST_CAMERA = 0
     private val SELECT_FILE = 1
+    lateinit var validate: ValidateFragment
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         var view = inflater!!.inflate(R.layout.detail, container, false)
@@ -25,8 +27,13 @@ class DetailFragment : HelpCamera(){
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        validate = ValidateFragment()
         bt_photo.setOnClickListener {
             selectImage()
+        }
+
+        bt_endereco.setOnClickListener {
+           HelpSecurity.manager!!.replaceFragment(R.id.content, validate, "validate", true)
         }
     }
 
